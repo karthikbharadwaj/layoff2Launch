@@ -38,6 +38,8 @@ main {
 .hero {
     text-align: center;
     position: relative;
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero::before {
@@ -50,33 +52,40 @@ main {
     height: 4px;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     border-radius: 2px;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
 .headline {
     font-size: 3.2rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--text-color-primary) 0%, var(--text-color-secondary) 100%);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 0 0 30px rgba(200, 160, 90, 0.3);
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
     font-size: 1.6rem;
+    margin: 3rem auto;
+    opacity: 1;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
     font-weight: 700;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    color: var(--text-color-secondary);
-    opacity: 0.9;
+    letter-spacing: 1px;
+    color: var(--text-color);
 }
 
 .benefits-list {
     list-style: none;
     text-align: left;
     max-width: 600px;
-    margin: 0 auto 4rem;
+    margin: 3rem auto;
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
